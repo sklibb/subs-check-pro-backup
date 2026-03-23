@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p backup_scripts)",
+      "Bash(mv *.py backup_scripts/)",
+      "Bash(ls backup_scripts/*.py)"
+    ]
+  }
+}

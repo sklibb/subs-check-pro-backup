@@ -21,14 +21,18 @@ type reportFallback struct {
 }
 
 const (
-	// totalBytes = 1024 GiB，以字节计
-	// 1 GiB = 1024^3 = 1 073 741 824 bytes
-	// 1024 GiB = 1 099 511 627 776 bytes
-	totalBytes int64 = 1024 * 1_073_741_824
+	// totalBytes = 1024 TiB，以字节计
+	// 1 TiB = 1024^4 = 1 099 511 627 776 bytes
+	// 1024 TiB = 1 125 899 906 842 624 bytes
+	totalBytes = 1024 * 1_099_511_627_776
 
 	// expireUnix = 2077-06-01 00:00:00 UTC
 	// 赛博朋克儿童节 🎉
+<<<<<<< Updated upstream
 	expireUnix int64 = 3389731200 // time.Date(2077,6,1,0,0,0,0,time.UTC).Unix()
+=======
+	expireUnix = 3_376_684_800 // time.Date(2077,6,1,0,0,0,0,time.UTC).Unix()
+>>>>>>> Stashed changes
 
 	planName = "Subs-Check-Pro"
 	appURL   = "https://github.com/sinspired/subs-check-pro"
@@ -287,6 +291,7 @@ func intIn(v int, list []int) bool {
 		}
 	}
 	return false
+<<<<<<< Updated upstream
 }
 
 // loadReportFallback 读取最新分析报告，提取流量与结束时间。
@@ -323,3 +328,6 @@ func loadReportFallback() reportFallback {
 	}
 	return fb
 }
+=======
+}
+>>>>>>> Stashed changes
